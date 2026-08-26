@@ -91,10 +91,10 @@ app.use('/api/applications', developerRouter)
 
 // Connect to MongoDB and start server on 0.0.0.0:5000
 async function bootstrap() {
-  await connectDB()
   server.listen(PORT, HOST, () => {
     console.log(`[DDS Auth Backend] Running on http://${HOST}:${PORT} (bound to 0.0.0.0 for port forwarding)`)
   })
+  await connectDB()
 }
 
 bootstrap()
