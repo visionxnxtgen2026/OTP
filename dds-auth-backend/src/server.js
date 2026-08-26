@@ -20,7 +20,7 @@ const HOST = process.env.HOST || '0.0.0.0'
 
 // Parse allowed origins from environment variable or use secure defaults
 const envOrigins = process.env.ALLOWED_ORIGINS
-  ? process.env.ALLOWED_ORIGINS.split(',').map((o) => o.trim()).filter(Boolean)
+  ? process.env.ALLOWED_ORIGINS.replace(/^ALLOWED_ORIGINS=/, '').split(',').map((o) => o.trim()).filter(Boolean)
   : []
 
 const defaultOrigins = [
