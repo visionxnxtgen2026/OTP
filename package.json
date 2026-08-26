@@ -12,9 +12,9 @@
     "dev:portal": "npm --prefix developer-portal run dev",
     "dev:thirdparty-frontend": "npm --prefix third-party-demo/frontend run dev",
     "dev:third-party-web": "npm --prefix third-party-demo/frontend run dev",
-    "build:packages": "npm --prefix packages/auth-sdk run build && npm --prefix packages/auth-react run build",
-    "pack:check": "powershell -Command \"cd packages/auth-sdk; npm pack --dry-run; cd ../auth-react; npm pack --dry-run; cd ../..\"",
-    "build": "npm --prefix packages/auth-sdk run build && npm --prefix packages/auth-react run build && npm --prefix user-app run build && npm --prefix developer-portal run build && npm --prefix third-party-demo/frontend run build"
+    "build:packages": "npm --prefix packages/auth-sdk run build && npm --prefix packages/auth-react run build && npm --prefix packages/auth run build && npm --prefix packages/create-auth-dds-zogoal run build",
+    "pack:check": "powershell -Command \"cd packages/auth; npm pack --dry-run; cd ../create-auth-dds-zogoal; npm pack --dry-run; cd ../..\"",
+    "build": "npm --prefix packages/auth-sdk run build && npm --prefix packages/auth-react run build && npm --prefix packages/auth run build && npm --prefix packages/create-auth-dds-zogoal run build && npm --prefix user-app run build && npm --prefix developer-portal run build && npm --prefix third-party-demo/frontend run build"
   },
   "devDependencies": {
     "concurrently": "^9.2.4"

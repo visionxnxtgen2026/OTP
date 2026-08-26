@@ -12,18 +12,18 @@ export const DocumentationView: React.FC = () => {
 
   const snippets = [
     {
-      title: '1. Install DDS Auth Backend SDK',
+      title: '1. Install DDS Auth SDK',
       method: 'NPM',
-      endpoint: 'npm install @dds/auth-sdk',
-      description: 'Add the official DDS Auth Node.js SDK to your third-party backend.',
-      code: `npm install @dds/auth-sdk`
+      endpoint: 'npm install @visionnxtgen2026/dds-auth',
+      description: 'Add the official DDS Auth unified SDK to your third-party backend (and optionally frontend).',
+      code: `npm install @visionnxtgen2026/dds-auth`
     },
     {
       title: '2. Initialize SDK in Backend',
       method: 'NODE.JS',
       endpoint: 'Server-Side Initialization',
       description: 'Initialize the SDK with your Client ID and Client Secret in your Express/Node.js backend.',
-      code: `import { DDSAuth } from '@dds/auth-sdk';
+      code: `import { DDSAuth } from '@visionnxtgen2026/dds-auth/server';
 
 const dds = new DDSAuth({
   clientId: process.env.DDS_CLIENT_ID,         // e.g. "dds_client_demoshop"
@@ -43,7 +43,7 @@ const dds = new DDSAuth({
   });
 
   console.log(result);
-  // Output: { success: true, requestId: "req_7f82k9", status: "pending", verificationCode: "697219" }
+  // Output: { success: true, requestId: "req_7f82k9", status: "pending" }
 } catch (err) {
   if (err.code === 'MOBILE_NOT_REGISTERED') {
     console.error('User has not registered this mobile number in DDS.');
@@ -64,9 +64,9 @@ console.log(statusResult);
     {
       title: '5. React Frontend Integration',
       method: 'REACT',
-      endpoint: 'npm install @dds/auth-react',
+      endpoint: 'npm install @visionnxtgen2026/dds-auth',
       description: 'Frontend integration helpers for React applications connecting to your merchant backend.',
-      code: `import { DDSProvider, useDDSVerification } from '@dds/auth-react';
+      code: `import { DDSProvider, useDDSVerification } from '@visionnxtgen2026/dds-auth/react';
 
 function Checkout() {
   const { initiateVerification, status, loading } = useDDSVerification({
@@ -91,7 +91,7 @@ function Checkout() {
         </div>
         <h2 className="text-2xl font-extrabold text-[#102F2A] tracking-tight">DDS Auth SDK Integration</h2>
         <p className="text-xs text-[#64746E] mt-0.5">
-          Integrate secure server-to-server mobile verification using the official <strong className="text-[#123C35]">@dds/auth-sdk</strong> and <strong className="text-[#123C35]">@dds/auth-react</strong>
+          Integrate secure server-to-server mobile verification using the official <strong className="text-[#123C35]">@visionnxtgen2026/dds-auth</strong> unified SDK.
         </p>
       </div>
 

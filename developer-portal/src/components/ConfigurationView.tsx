@@ -36,7 +36,7 @@ DDS_CLIENT_ID=${activeClientId}
 DDS_CLIENT_SECRET=${activeClientSecret}
 DDS_AUTH_URL=${baseURL}`
 
-  const serverInitSnippet = `import { DDSAuth } from '@dds/auth-sdk';
+  const serverInitSnippet = `import { DDSAuth } from '@visionnxtgen2026/dds-auth/server';
 
 const dds = new DDSAuth({
   clientId: process.env.DDS_CLIENT_ID,
@@ -182,7 +182,7 @@ const result = await dds.verification.request({
             <div className="flex items-center justify-between">
               <span className="text-[11px] font-bold uppercase text-[#64746E]">SDK Installation</span>
               <button
-                onClick={() => handleCopy('npm install @dds/auth-sdk', 'sdkInstall')}
+                onClick={() => handleCopy('npm install @visionnxtgen2026/dds-auth', 'sdkInstall')}
                 className="text-xs font-semibold text-[#123C35] hover:text-[#6F9584] flex items-center gap-1 cursor-pointer transition-colors"
               >
                 {copiedKey === 'sdkInstall' ? (
@@ -199,7 +199,7 @@ const result = await dds.verification.request({
               </button>
             </div>
             <code className="font-mono font-bold text-[#123C35] text-sm block">
-              npm install @dds/auth-sdk
+              npm install @visionnxtgen2026/dds-auth
             </code>
           </div>
         </div>

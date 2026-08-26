@@ -1,0 +1,4 @@
+# DDS Auth — Environment secrets
+.env
+.env.*
+!.env.example

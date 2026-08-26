@@ -110,12 +110,10 @@ export const verificationController = {
       })
 
       // Response to Third-Party SDK / Backend:
-      // The 6-digit verification code belongs to the Third-Party Website / Merchant to display!
       return res.status(200).json({
         success: true,
         requestId: verificationDoc.requestId,
-        status: 'pending',
-        verificationCode: rawCode
+        status: 'pending'
       })
     } catch (err) {
       console.error('Create verification error:', err)

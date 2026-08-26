@@ -184,12 +184,11 @@ app.post('/api/auth/verify', async (req, res) => {
       origin: originHeader
     })
 
-    console.log(`[DemoShop Backend] ✓ Challenge created: Request ID: ${challenge.requestId}, Code: ${challenge.verificationCode}`)
+    console.log(`[DemoShop Backend] ✓ Challenge created: Request ID: ${challenge.requestId}`)
 
     return res.json({
       success: true,
       requestId: challenge.requestId,
-      verificationCode: challenge.verificationCode,
       status: challenge.status,
       expiresAt: challenge.expiresAt
     })

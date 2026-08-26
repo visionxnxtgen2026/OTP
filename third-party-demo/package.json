@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "dds-auth-zogoal": "file:../packages/dds-auth-zogoal/dds-auth-zogoal-1.0.0.tgz"
+  }
+}
