@@ -100,7 +100,7 @@ export const devApi = {
       return {
         success: false,
         error: 'NETWORK_ERROR',
-        message: 'Could not connect to DDS Auth Backend on http://localhost:5000'
+        message: `Could not connect to DDS Auth Backend on ${DDS_BASE_URL}`
       }
     }
   },

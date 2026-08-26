@@ -685,9 +685,11 @@ export const ApplicationsView: React.FC<ApplicationsViewProps> = ({ onOpenCreate
             <div className="p-3.5 bg-[#F7F8F3] rounded-2xl border border-[#D8E0DA] space-y-1">
               <span className="text-[10px] font-bold uppercase text-[#64746E] block">Base URL</span>
               <div className="flex items-center justify-between">
-                <code className="font-mono text-xs font-bold text-[#102F2A]">http://localhost:5000</code>
+                <code className="font-mono text-xs font-bold text-[#102F2A]">
+                  {(import.meta.env.VITE_DDS_AUTH_URL || 'http://localhost:5000').replace(/\/$/, '')}
+                </code>
                 <button
-                  onClick={() => handleCopy('http://localhost:5000', 'apiBase')}
+                  onClick={() => handleCopy((import.meta.env.VITE_DDS_AUTH_URL || 'http://localhost:5000').replace(/\/$/, ''), 'apiBase')}
                   className="text-[11px] text-[#123C35] font-bold hover:underline cursor-pointer"
                 >
                   {copiedKey === 'apiBase' ? 'Copied' : 'Copy'}

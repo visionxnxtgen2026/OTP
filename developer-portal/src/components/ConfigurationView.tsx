@@ -29,7 +29,7 @@ export const ConfigurationView: React.FC = () => {
 
   const activeClientId = selectedApp?.clientId || 'dds_client_demoshop'
   const activeClientSecret = selectedApp?.clientSecret || 'dds_secret_demoshop_live_9f82k'
-  const baseURL = 'http://localhost:5000'
+  const baseURL = (import.meta.env.VITE_DDS_AUTH_URL || 'http://localhost:5000').replace(/\/$/, '')
 
   const backendEnvSnippet = `PORT=5001
 DDS_CLIENT_ID=${activeClientId}
