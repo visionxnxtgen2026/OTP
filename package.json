@@ -1,0 +1,22 @@
+{
+  "name": "dds-auth-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n \"DDS_AUTH,3RD_BACKEND,USER_APP,DEV_PORTAL,3RD_FRONTEND\" -c \"blue,yellow,green,magenta,cyan\" \"npm --prefix dds-auth-backend run dev\" \"npm --prefix third-party-demo/backend run dev\" \"npm --prefix user-app run dev\" \"npm --prefix developer-portal run dev\" \"npm --prefix third-party-demo/frontend run dev\"",
+    "dev:auth": "npm --prefix dds-auth-backend run dev",
+    "dev:thirdparty-backend": "npm --prefix third-party-demo/backend run dev",
+    "dev:third-party-api": "npm --prefix third-party-demo/backend run dev",
+    "dev:user": "npm --prefix user-app run dev",
+    "dev:portal": "npm --prefix developer-portal run dev",
+    "dev:thirdparty-frontend": "npm --prefix third-party-demo/frontend run dev",
+    "dev:third-party-web": "npm --prefix third-party-demo/frontend run dev",
+    "build:packages": "npm --prefix packages/auth-sdk run build && npm --prefix packages/auth-react run build",
+    "pack:check": "powershell -Command \"cd packages/auth-sdk; npm pack --dry-run; cd ../auth-react; npm pack --dry-run; cd ../..\"",
+    "build": "npm --prefix packages/auth-sdk run build && npm --prefix packages/auth-react run build && npm --prefix user-app run build && npm --prefix developer-portal run build && npm --prefix third-party-demo/frontend run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.4"
+  }
+}

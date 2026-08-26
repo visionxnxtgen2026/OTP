@@ -1,0 +1,89 @@
+{
+  "developers": [
+    {
+      "id": "dev_001",
+      "email": "developer@example.com",
+      "password": "password123",
+      "name": "Alex Dev",
+      "createdAt": "2026-08-01T10:00:00.000Z"
+    }
+  ],
+  "applications": [
+    {
+      "id": "app_1",
+      "name": "DemoShop",
+      "websiteUrl": "http://localhost:5175",
+      "redirectUrl": "http://localhost:5175/callback",
+      "description": "Demo third-party e-commerce website using Zogoal Auth verification",
+      "applicationId": "app_demo_8F42K91X",
+      "apiKey": "pk_demo_7H82K92L",
+      "apiSecret": "sk_demo_93K82P21",
+      "status": "Active",
+      "createdAt": "2026-08-10T12:00:00.000Z"
+    },
+    {
+      "id": "app_2",
+      "name": "CloudFleet Portal",
+      "websiteUrl": "http://localhost:5175/fleet",
+      "redirectUrl": "http://localhost:5175/fleet/callback",
+      "description": "Enterprise fleet management security gateway",
+      "applicationId": "app_demo_3X99M42Z",
+      "apiKey": "pk_demo_5T21Q88B",
+      "apiSecret": "sk_demo_11L49V63",
+      "status": "Active",
+      "createdAt": "2026-08-15T09:30:00.000Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "usr_sanjai_01",
+      "name": "Sanjai",
+      "email": "sanjai@zogoal.example",
+      "mobileNumber": "9876543210",
+      "countryCode": "+91",
+      "isGoogleSignedIn": true,
+      "isMobileVerified": true,
+      "status": "Verified",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=256"
+    }
+  ],
+  "verificationRequests": [
+    {
+      "id": "req_235295",
+      "requestId": "req_235295",
+      "applicationId": "app_demo_8F42K91X",
+      "applicationName": "DemoShop",
+      "websiteUrl": "http://localhost:5175",
+      "mobileNumber": "9876543210",
+      "code": "327729",
+      "status": "verified",
+      "createdAt": "2026-08-26T04:49:37.362Z",
+      "expiresAt": "2026-08-26T04:51:37.362Z",
+      "verifiedAt": "2026-08-26T04:49:44.248Z"
+    },
+    {
+      "id": "req_138715",
+      "requestId": "req_138715",
+      "applicationId": "app_demo_8F42K91X",
+      "applicationName": "DemoShop",
+      "websiteUrl": "http://localhost:5175",
+      "mobileNumber": "9876543210",
+      "code": "550592",
+      "status": "verified",
+      "createdAt": "2026-08-26T04:49:00.056Z",
+      "expiresAt": "2026-08-26T04:51:00.056Z",
+      "verifiedAt": "2026-08-26T04:49:00.093Z"
+    },
+    {
+      "id": "req_demo_prev_01",
+      "applicationId": "app_demo_8F42K91X",
+      "applicationName": "DemoShop",
+      "mobileNumber": "9876543210",
+      "code": "582194",
+      "status": "verified",
+      "createdAt": "2026-08-26T08:15:00.000Z",
+      "expiresAt": "2026-08-26T08:17:00.000Z",
+      "verifiedAt": "2026-08-26T08:15:32.000Z"
+    }
+  ]
+}

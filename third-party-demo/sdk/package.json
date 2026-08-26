@@ -1,0 +1,10 @@
+{
+  "name": "@dds/auth-sdk",
+  "version": "1.0.0",
+  "description": "Official DDS Mobile Auth & Verification SDK for Node.js backends",
+  "main": "index.js",
+  "type": "module",
+  "keywords": ["dds", "auth", "verification", "security"],
+  "author": "DDS Team",
+  "license": "MIT"
+}

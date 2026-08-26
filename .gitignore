@@ -1,0 +1,116 @@
+# =============================================================================
+# DDS AUTH MONOREPO — PRODUCTION-READY ROOT .gitignore
+# =============================================================================
+
+# 1. Dependencies
+node_modules/
+**/node_modules/
+
+# 2. Environment Variables & Local Configs (Exclude secrets, preserve examples)
+.env
+.env.*
+*.env
+*.local
+**/.env
+**/.env.*
+**/*.env
+**/*.local
+!.env.example
+!.env.template
+!.env.sample
+!**/.env.example
+!**/.env.template
+!**/.env.sample
+
+# 3. Security Credentials, Certificates & Service Account Keys
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+serviceAccountKey.json
+**/serviceAccountKey.json
+firebase-adminsdk-*.json
+**/firebase-adminsdk-*.json
+gcp-credentials.json
+**/gcp-credentials.json
+google-credentials.json
+**/google-credentials.json
+
+# 4. Local MongoDB Database Data (Private local persistence)
+.mongo_data/
+**/.mongo_data/
+
+# 5. Build Artifacts & Bundler Caches
+dist/
+**/dist/
+build/
+**/build/
+.vite/
+**/.vite/
+coverage/
+**/coverage/
+.cache/
+**/.cache/
+
+# 6. Logs & Process Identifiers
+*.log
+**/*.log
+logs/
+**/logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.pid
+*.pid.lock
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+
+# 7. Firebase Local Emulators & Cache
+.firebase/
+**/.firebase/
+
+# 8. Operating System Generated Files
+.DS_Store
+**/.DS_Store
+Thumbs.db
+**/Thumbs.db
+Desktop.ini
+**/Desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+.AppleDouble
+.LSOverride
+
+# 9. IDE & Editor Files
+.idea/
+**/.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.example.json
+
+# 10. Temporary & Backup Files
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.orig
+
+# 11. Test & Coverage Reports
+test-results/
+playwright-report/
+blob-report/
+.nyc_output/
+
+# 12. TypeScript Build Info
+*.tsbuildinfo
+**/*.tsbuildinfo
+
+# 13. NPM Package Tarballs
+*.tgz
+**/*.tgz

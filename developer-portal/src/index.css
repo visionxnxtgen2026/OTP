@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dds-bg: #F7F8F3;
+  --color-dds-bg-subtle: #EEF2EC;
+  --color-dds-primary: #123C35;
+  --color-dds-text: #102F2A;
+  --color-dds-text-muted: #64746E;
+  --color-dds-accent: #6F9584;
+  --color-dds-accent-light: #DCE8E1;
+  --color-dds-border: #D8E0DA;
+  --color-dds-surface: #FFFFFF;
+  --color-dds-success: #2F8F6B;
+  --color-dds-warning: #C48A32;
+  --color-dds-error: #C95A5A;
+}
+
+:root {
+  --bg-primary: #F7F8F3;
+  --bg-secondary: #EEF2EC;
+  --text-primary: #102F2A;
+  --text-secondary: #64746E;
+  --color-primary: #123C35;
+  --color-accent: #6F9584;
+  --color-accent-light: #DCE8E1;
+  --color-border: #D8E0DA;
+  --color-white: #FFFFFF;
+  --color-success: #2F8F6B;
+  --color-warning: #C48A32;
+  --color-error: #C95A5A;
+}
+
+@layer base {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #F7F8F3;
+    color: #102F2A;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

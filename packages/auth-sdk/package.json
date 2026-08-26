@@ -1,0 +1,40 @@
+{
+  "name": "@dds/auth-sdk",
+  "version": "0.1.0",
+  "description": "Official DDS Auth Node.js SDK for secure mobile verification",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "dds",
+    "auth",
+    "verification",
+    "otp",
+    "security",
+    "identity"
+  ],
+  "author": "DDS Team",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.8.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
