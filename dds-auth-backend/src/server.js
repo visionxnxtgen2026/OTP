@@ -2,6 +2,7 @@ import express from 'express'
 import http from 'http'
 import cors from 'cors'
 import dotenv from 'dotenv'
+import mongoose from 'mongoose'
 import { connectDB } from './db.js'
 import { initSocket } from './services/socket.service.js'
 import { authRouter } from './routes/auth.routes.js'
@@ -66,6 +67,7 @@ app.get(['/health', '/api/health'], (req, res) => {
   res.json({
     status: 'ok',
     service: 'dds-auth-backend',
+    database: mongoose.connection.readyState === 1 ? 'connected' : 'disconnected',
     port: PORT,
     host: HOST,
     timestamp: new Date().toISOString()

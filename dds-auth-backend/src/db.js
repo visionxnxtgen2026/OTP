@@ -9,8 +9,9 @@ const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/dds_au
 
 export async function connectDB() {
   try {
-    await mongoose.connect(MONGODB_URI)
-    console.log(`[MongoDB] Connected successfully to ${MONGODB_URI}`)
+    const isAtlas = MONGODB_URI.includes('mongodb+srv') || MONGODB_URI.includes('mongodb.net')
+    const dbTargetName = isAtlas ? 'MongoDB Atlas (dds_auth)' : 'Local MongoDB (dds_auth)'
+    console.log(`[MongoDB] Connected successfully to ${dbTargetName}`)
 
     // Ensure database unique indexes (Requirement #4, #14, #25)
     await User.createIndexes().catch(err => console.warn('[MongoDB] User index sync note:', err.message))
